@@ -1,5 +1,7 @@
--- SELECIONE TODAS AS TRANAÇÕES DE 50 PONTOS
-SELECT *
+-- Lista de pedidos realizados n fim de semana;
+SELECT 
+    IdTransacao,
+    DtCriacao,
+    strftime('%w', datetime(substr(DtCriacao,1,19))) AS diaSemana
 FROM transacoes
-WHERE qtdePontos = 50
-LIMIT 10
+where diaSemana IN ('6','0')

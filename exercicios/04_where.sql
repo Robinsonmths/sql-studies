@@ -1,11 +1,9 @@
--- Selecione todos os produtos que tem 'churn' nome
+-- Lista de clientes com 100 a 200 pontos inclusive 100 e 200
 
-SELECT * 
-FROM produtos
-WHERE DescNomeProduto LIKE '%Churn%'
-
---WHERE DescNomeProduto IN ('Churn_10pp','Churn_2pp','Churn_5pp')
-
---WHERE DescNomeProduto = 'Churn_10pp'
---OR DescNomeProduto = 'Churn_2pp'
---OR DescNomeProduto = 'Churn_5pp
+SELECT 
+    IdCliente,
+    QtdePontos
+FROM clientes
+WHERE qtdePontos
+BETWEEN 100 AND 200
+-- WHERE qtdePontos >=100 AND qtdePontos <= 200

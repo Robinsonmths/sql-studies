@@ -1,4 +1,8 @@
-SELECT idCliente,
-    qtdePontos
+--Lista de clientes com 0 pontos
+
+SELECT 
+        IdCliente,
+        qtdePontos
 FROM clientes
-WHERE qtdePontos >= 500
+WHERE qtdePontos = 0
+LIMIT (10)
